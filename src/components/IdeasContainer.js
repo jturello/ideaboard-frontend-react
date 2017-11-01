@@ -19,9 +19,21 @@ class IdeasContainer extends Component {
     .catch(error => console.log(error))
   }
 
+  addNewIdea = () => {
+    axios.post('/api/v1/ideas', {idea: {title: '', body: ''}})
+    .then(response => {
+      console.log(response)
+    })
+    .catch(error => console.log(error))
+  }
+
   render() {
     return (
       <div>
+	<div >
+	  <button className="newIdeaButton" onClick={this.addNewIdea} >New Idea</button>
+	</div>
+
 	{this.state.ideas.map((idea) => {
 	  return (
 	    <Idea idea={idea} key={idea.id} />
