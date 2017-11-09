@@ -28,6 +28,7 @@
   float: left;
   font-size: 11px;
   text-align: left;
+  border: solid 1px #F9E79F;
 }
 
 .newIdeaButton {
