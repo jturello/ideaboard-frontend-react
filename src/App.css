@@ -60,3 +60,7 @@ textarea {
   height: 90px;
   font-size: 11px;
 }
+
+.notification {
+  color: red;
+}
