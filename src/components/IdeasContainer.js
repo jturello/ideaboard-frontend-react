@@ -17,6 +17,7 @@ class IdeasContainer extends Component {
     axios.get('/api/v1/ideas')
     .then(response => {
       console.log(response)
+      console.log('response.data.length: ' + response.data.length)
       this.setState({ideas: response.data})
     })
     .catch(error => console.log(error))
@@ -55,9 +56,7 @@ class IdeasContainer extends Component {
       <div>
 	<div >
 	  <button className="newIdeaButton" onClick={this.addNewIdea} >New Idea</button>
-	  <span className="notification">
-	    {this.state.notification}
-	  </span>
+	  <span className="notification"> {this.state.notification} </span> 
 	</div>
 
 	{this.state.ideas.map((idea) => {
